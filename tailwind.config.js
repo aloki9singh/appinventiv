@@ -1,18 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './public/**/*.{js,jsx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        'app-blue': '#0D47A1', // Example color from Appinventiv's palette
-        'app-gray': '#F5F5F5', // Light gray for backgrounds
+        "app-blue": "#0D47A1", // Appinventiv blue
+        "app-gray": "#F5F5F5", // Light gray background
       },
-      fontFamily: {
-        'inter': ['Inter', 'sans-serif'], // Match site's font
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite",
       },
     },
   },

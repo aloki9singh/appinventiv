@@ -1,11 +1,19 @@
+import HeroSection from "../components/Sections/HeroSection";
+import StatsSection from "../components/Sections/StatsSection";
+import TopBar from "../components/Sections/Topbar";
+import "../styles/globals.css";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-app-gray text-purple-700">
-      <header className="bg-app-blue text-white p-4 text-center">
-        <h1 className="text-3xl font-bold">Appinventiv Homepage Clone</h1>
+    <div className="min-h-screen text-purple-700 bg-app-gray">
+      <header>
+        <TopBar />
       </header>
-      <main className="container mx-auto p-4">
-        <p className="text-lg text-gray-700">This is the start of our responsive homepage.</p>
+      <main className="mx-auto ">
+        <StatsSection />
+        <p className="text-lg text-gray-700">
+          This is the start of our responsive homepage.
+        </p>
       </main>
     </div>
   );
