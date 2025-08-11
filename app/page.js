@@ -6,6 +6,7 @@ import { Statsanddetails } from "../components/Statsanddetails/statsanddetails";
 import "../styles/globals.css";
 import HeroSection from "../components/Sections/HeroSection";
 import AwardsSection from "../components/Sections/AwardsSection";
+import { Readytoinnovate } from "../components/Sections/Readytoinnovate";
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
       <main className="pt-[123px] px-0 bg-black lg:px-18">
         <HeroSection />
         <AwardsSection />
-        <ImageScroller />
         <Statsanddetails />
+        <Readytoinnovate />
+        <ImageScroller />
       </main>
 
       <Footer />

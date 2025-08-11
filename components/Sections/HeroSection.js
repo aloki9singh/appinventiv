@@ -26,7 +26,7 @@ export default function HeroSection() {
           business needs, ensuring sustainable market leadership.
         </p>
         <button className="px-6 py-3 mt-8 font-medium text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-          Consult Our Experts
+          Consult Our Experts <span> {"  >"}</span>
         </button>
       </div>
     </section>

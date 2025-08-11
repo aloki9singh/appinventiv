@@ -12,7 +12,7 @@ export default function AwardsSection() {
   ];
 
   return (
-    <section className="px-4 py-12 text-white bg-black sm:px-6 lg:px-8">
+    <section className="px-5 py-12 text-white bg-black sm:px-5 lg:px-2">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-wrap justify-center gap-8 pb-10 ">
           {awards.map((award, index) => (
