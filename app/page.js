@@ -7,6 +7,7 @@ import "../styles/globals.css";
 import HeroSection from "../components/Sections/HeroSection";
 import AwardsSection from "../components/Sections/AwardsSection";
 import { Readytoinnovate } from "../components/Sections/Readytoinnovate";
+import ROISection from "../components/Sections/ROIintelligence";
 
 export default function Home() {
   return (
@@ -22,7 +23,9 @@ export default function Home() {
         <AwardsSection />
         <Statsanddetails />
         <Readytoinnovate />
+
         <ImageScroller />
+        <ROISection />
       </main>
 
       <Footer />
