@@ -8,6 +8,7 @@ import HeroSection from "../components/Sections/HeroSection";
 import AwardsSection from "../components/Sections/AwardsSection";
 import { Readytoinnovate } from "../components/Sections/Readytoinnovate";
 import ROISection from "../components/Sections/ROIintelligence";
+import { Offices } from "../components/Sections/Offices";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
 
         <ImageScroller />
         <ROISection />
+        <Offices />
       </main>
 
       <Footer />
