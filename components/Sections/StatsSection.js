@@ -43,7 +43,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="py-12 bg-black">
+    <section className="py-12 bg-black ">
       <div className="container grid grid-cols-1 gap-6 px-4 mx-auto lg:grid-cols-3">
         {stats.map((stat, index) => (
           <StatCard

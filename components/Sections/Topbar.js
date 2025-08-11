@@ -1,33 +1,54 @@
-"use client"
+"use client";
 import Link from "next/link";
 import RingingCallIcon from "../Callicon/Callicon";
+import ButtonWithIcon from "../common/ButtonWithIcon";
 
-export default function TopBar() {
+export default function MarqueeBanner() {
   return (
-    <div className="bg-[#1163fb] text-white py-2 px-2 lg:px-2">
-      <div className="container flex flex-col items-center justify-around sm:flex-row">
-        <div className="w-full overflow-hidden whitespace-nowrap sm:w-auto">
-          <div className="inline-block animate-marquee">
-            <span className="text-sm sm:text-base text-[#fff] mr-8">
-              Uncover proof of Appinventiv's impact across 3000+ digital
-              deliveries for 35+ industries.{" "}
-              <Link href="#" className="underline hover:text-white">
-                EXPLORE NOW!
-              </Link>
-            </span>
+    <div className="bg-[#1163fb] text-white py-2 text-sm">
+      <div className="max-w-[1400px] mx-auto flex items-center px-4 lg:px-6">
+        
+        {/* Marquee */}
+        <div className="flex-1 overflow-hidden group shrink-0">
+          <div
+            className="flex animate-marquee group-hover:[animation-play-state:paused]"
+            style={{ minWidth: "max-content" }}
+          >
+            {[...Array(3)].map((_, i) => (
+              <span key={i} className="flex items-center whitespace-nowrap">
+                Uncover proof of Appinventiv's impact across 3000+ digital
+                deliveries for 35+ industries.&nbsp;
+                <Link
+                  href="#"
+                  className="flex items-center underline hover:text-white"
+                >
+                  EXPLORE NOW!
+                  <svg
+                    className="ml-1"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" />
+                  </svg>
+                </Link>
+                &nbsp;&nbsp;
+              </span>
+            ))}
           </div>
         </div>
-        {/* <button className="hidden px-4 py-2 mt-2 text-sm bg-white rounded-full text-app-blue lg:block hover:bg-gray-200 sm:mt-0 sm:text-base focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-          <span className="mr-2 ">📞</span> Contact Us
-        </button> */}
-        <button
-          type="button"
-          classname="text-gray-900 hidden inline:flex bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center dark:focus:ring-gray-500 me-2 mb-2"
-        >
-         
-          <RingingCallIcon/>
-          Contact Us
-        </button>
+
+        {/* Contact Button */}
+        <div className="flex-shrink-0 pl-4">
+          <ButtonWithIcon
+            icon={RingingCallIcon}
+            label="Contact Us"
+            onClick={() => alert("Calling...")}
+            className="hidden lg:inline-flex"
+          />
+        </div>
       </div>
     </div>
   );
