@@ -6,9 +6,7 @@ import ButtonWithIcon from "../common/ButtonWithIcon";
 export default function MarqueeBanner() {
   return (
     <div className="bg-[#1163fb] text-white py-2 text-sm">
-      <div className="max-w-[1400px] mx-auto flex items-center px-4 lg:px-6">
-        
-        {/* Marquee */}
+      <div className="flex items-center max-w-screen-xl px-4 mx-auto lg:px-6">
         <div className="flex-1 overflow-hidden group shrink-0">
           <div
             className="flex animate-marquee group-hover:[animation-play-state:paused]"
@@ -39,8 +37,6 @@ export default function MarqueeBanner() {
             ))}
           </div>
         </div>
-
-        {/* Contact Button */}
         <div className="flex-shrink-0 pl-4">
           <ButtonWithIcon
             icon={RingingCallIcon}

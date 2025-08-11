@@ -1,5 +1,5 @@
-// app/page.js (or wherever you want the section)
 
+"use client";
 import StatCard from "../Cards/StatCard";
 
 export default function StatsSection() {
@@ -43,8 +43,8 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="py-12 bg-black ">
-      <div className="container grid grid-cols-1 gap-6 px-4 mx-auto lg:grid-cols-3">
+    <section className="py-12 bg-black">
+      <div className="grid max-w-screen-xl grid-cols-1 gap-6 px-4 mx-auto lg:grid-cols-3">
         {stats.map((stat, index) => (
           <StatCard
             key={index}
