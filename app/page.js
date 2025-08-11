@@ -4,6 +4,7 @@ import TopBar from "../components/Sections/Topbar";
 import ImageScroller from "../components/Sections/ImageScroll";
 import { Statsanddetails } from "../components/Statsanddetails/statsanddetails";
 import "../styles/globals.css";
+import HeroSection from "../components/Sections/HeroSection";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <Navbar />
       </header>
 
-      <main className="pt-[160px] px-0 bg-black lg:px-18">
+      <main className="pt-[123px] px-0 bg-black lg:px-18">
+        <HeroSection />
         <ImageScroller />
         <Statsanddetails />
       </main>

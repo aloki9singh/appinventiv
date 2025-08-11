@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+
       colors: {
         "app-blue": "#0D47A1", // Appinventiv blue
         "app-gray": "#F5F5F5", // Light gray background
