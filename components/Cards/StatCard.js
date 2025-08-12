@@ -7,12 +7,12 @@ export default function StatCard({ title, description, number }) {
       <span className="mt-2 text-[36px] font-medium tracking-tight text-[#1163fb]">
         {number}
       </span>
-      {/* Title */}
+
       <h2 className="text-[20px] font-semibold text-gray-800 dark:text-gray-100">
         {title}
       </h2>
 
-      {/* Description */}
+   
       <p className="text-[16px] text-gray-500 dark:text-gray-400">
         {description}
       </p>

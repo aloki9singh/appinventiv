@@ -37,6 +37,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        moveRight: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(4px)" },
+        },
       },
       animation: {
         marquee: "marquee 15s linear infinite",
@@ -44,6 +48,7 @@ module.exports = {
         shine: "shine 5s linear infinite",
         "fade-in": "fadeIn 0.3s ease-out",
         "scroll-horizontal": "scroll-left 20s linear infinite",
+        moveRight: "moveRight 0.5s ease-in-out infinite",
       },
       backgroundSize: {
         "200%": "200% 200%",
