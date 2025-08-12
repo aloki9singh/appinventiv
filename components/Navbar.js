@@ -20,15 +20,12 @@ export default function Navbar() {
           <Image
             src="/images/appinventivlogo.svg"
             alt="App inventiv Logo"
-            height={50} 
-            width={170} 
+            height={50}
+            width={170}
             className="h-8"
           />
         </Link>
 
-        {/* Mobile Menu Button */}
-
-        {/* Contact Button */}
         <div className="inline-flex space-x-5">
           <div className="flex items-center justify-center w-10 h-10 text-white bg-blue-700 rounded-lg md:hidden">
             <RingingCallIcon className="w-5 h-5" />
@@ -59,7 +56,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Desktop & Mobile Menu */}
         <div
           id="mega-menu-full"
           className={`${
