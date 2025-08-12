@@ -5,14 +5,13 @@ export const Offices = () => {
     <section className="py-16 text-center bg-gradient-to-b from-black to-slate-900">
       <div className="lg:px-[130px] px-[20px] mx-auto">
         <div className="flex flex-col items-center gap-4 p-6 sm:flex-row sm:justify-center sm:items-center lg:flex-row lg:justify-between lg:items-center">
-          {/* Logo */}
+        
           <img
             src="/images/Offices/WhiteAppInventiv.svg"
             alt="Company Logo"
             className="h-10 sm:h-12 lg:h-14"
           />
 
-          {/* Clutch badge */}
           <div className="flex items-center px-3 py-2 text-blue-200 rounded-md bg-slate-800">
             <img
               src="/images/Offices/clutch.svg"

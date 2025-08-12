@@ -16,6 +16,7 @@ import NavigateSection from "../components/Sections/NavigateSection";
 import CaseStudy from "../components/Sections/CaseStudy";
 import CaseStudy2 from "../components/Sections/CaseStudy2";
 import TestimonialSection from "../components/Sections/TestimonialSection";
+import FeatureSection from "../components/Sections/FeatureSection";
 
 export default function Home() {
   return (
@@ -32,8 +33,10 @@ export default function Home() {
         <Statsanddetails />
         <Readytoinnovate />
         <CaseStudy />
-        <TestimonialSection />
         {/* <CaseStudy2 /> */}
+        <TestimonialSection />
+        <FeatureSection />
+
         {/* <ImageScroller /> */}
         <NavigateSection />
         <ROISection />

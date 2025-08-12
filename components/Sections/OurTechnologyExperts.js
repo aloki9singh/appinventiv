@@ -1,7 +1,7 @@
 export default function OurTechnologyExpert() {
   return (
     <div className="flex flex-col items-start justify-between min-h-screen px-8 py-16 text-white md:flex-row md:items-center md:px-32 lg:px-40 bg-[linear-gradient(to_bottom_right,_#6D28D9,_#334155,_#000000,_#075985,_#0C4A6E)] lg:space-x-5">
-      {/* Left Section */}
+    
       <div className="space-y-6 md:w-3/5">
         <h1 className="hidden text-4xl font-semibold leading-tight lg:block lg:text-4xl md:text-5xl">
           Our Technology <br /> Experts Are Change <br /> Catalysts
@@ -14,7 +14,7 @@ export default function OurTechnologyExpert() {
         </p>
       </div>
 
-      {/* Right Section (Form) */}
+      {/* Right  (Form) */}
       <div className="p-8 mt-10 space-y-6 rounded-lg shadow-[0px_3px_8px_rgba(0,0,0,0.24)] border border-gray-700 bg-formBackground lg:px-10 md:w-2/5 md:mt-0">
         <input
           type="text"

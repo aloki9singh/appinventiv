@@ -72,7 +72,7 @@ export default function CaseStudy() {
         className="max-w-[76rem] mx-auto flex flex-col md:flex-row items-center gap-10"
         {...handlers}
       >
-        {/* LEFT SIDE: TEXT */}
+     
         <div className="flex-1">
           <AnimatePresence mode="wait">
             <motion.div
@@ -109,9 +109,9 @@ export default function CaseStudy() {
           </AnimatePresence>
         </div>
 
-        {/* RIGHT SIDE: IMAGE STACK REVEAL */}
+       
         <div className="flex-1 w-full max-w-xl relative h-80 rounded-lg overflow-hidden">
-          {/* Background (Next image) */}
+        
           <Image
             src={next.image}
             alt={next.title}
