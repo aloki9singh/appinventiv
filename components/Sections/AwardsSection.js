@@ -12,26 +12,8 @@ export default function AwardsSection() {
   const scrollingAwards = [...awards, ...awards];
   return (
     <section className="px-5 py-12 text-white bg-black sm:px-5 lg:px-2">
-      <div className="max-w-screen-xl mx-auto">
-        {/* <div className="flex-wrap justify-center hidden gap-8 pb-10 lg:flex ">
-          {awards.map((award, index) => (
-            <div
-              key={index}
-              className={`flex items-center justify-center pl-6 ${
-                index !== 0 ? "border-l border-zinc-600" : ""
-              }`}
-            >
-              <Image
-                src={award.src}
-                alt={award.alt}
-                width={200}
-                height={40}
-                style={{ height: "95px" }}
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div> */}
+      <div className="mx-auto " style={{ maxWidth: "76rem" }}>
+      
         <div className="w-full py-4 overflow-hidden bg-transparent">
           <div className="flex gap-8 animate-scroll-horizontal w-max">
             {scrollingAwards.map((award, index) => (

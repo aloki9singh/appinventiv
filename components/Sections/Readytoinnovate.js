@@ -2,7 +2,7 @@
 import { ArrowTrendingUpIcon } from "@heroicons/react/24/solid";
 export const Readytoinnovate = () => {
   return (
-    <div className="px-6 mx-auto max-w-7xl lg:px-4">
+    <div className="px-6 mx-auto lg:px-4" style={{ maxWidth: "78rem" }}>
       <div className="flex flex-col items-center justify-between p-6 mt-10 rounded-lg bg-neutral-900 sm:flex-row sm:p-8">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-gray-800 rounded-md">
