@@ -13,6 +13,7 @@ import OurTechnologyExpert from "../components/Sections/OurTechnologyExperts";
 import FAQ from "../components/Sections/FAQ";
 
 import NavigateSection from "../components/Sections/NavigateSection";
+import CaseStudy from "../components/Sections/CaseStudy";
 
 export default function Home() {
   return (
@@ -28,7 +29,8 @@ export default function Home() {
         <AwardsSection />
         <Statsanddetails />
         <Readytoinnovate />
-        <ImageScroller />
+        <CaseStudy />
+        {/* <ImageScroller /> */}
         <NavigateSection />
         <ROISection />
         <OurTechnologyExpert />
