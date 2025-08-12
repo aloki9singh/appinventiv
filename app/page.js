@@ -12,6 +12,8 @@ import { Offices } from "../components/Sections/Offices";
 import OurTechnologyExpert from "../components/Sections/OurTechnologyExperts";
 import FAQ from "../components/Sections/FAQ";
 
+import NavigateSection from "../components/Sections/NavigateSection";
+
 export default function Home() {
   return (
     <div className="min-h-screen text-purple-700 bg-app-gray">
@@ -26,11 +28,11 @@ export default function Home() {
         <AwardsSection />
         <Statsanddetails />
         <Readytoinnovate />
-
+        <NavigateSection />
         <ImageScroller />
         <ROISection />
-        <OurTechnologyExpert/>
-        <FAQ/>
+        <OurTechnologyExpert />
+        <FAQ />
         <Offices />
       </main>
 
