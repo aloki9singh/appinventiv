@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaChevronRight, FaPlay } from "react-icons/fa";
-import GradientButton from "../common/GradientButton";
 
 export default function TestimonialSection() {
   const [progress, setProgress] = useState(0);
@@ -31,7 +30,6 @@ export default function TestimonialSection() {
     },
   ];
 
-  // Track scroll progress for the animation
   useEffect(() => {
     const handleScroll = () => {
       const maxScroll =
@@ -46,14 +44,12 @@ export default function TestimonialSection() {
   return (
     <section className="overflow-x-hidden bg-gradient-to-br from-slate-900 to-purple-600 text-white py-16">
       <div className="max-w-[82rem] mx-auto px-6 sm:px-8 lg:px-12 space-y-5">
-        {/* Animated Heading */}
         <div className="mb-12 relative">
-          {/* Gray base text */}
           <h1 className="text-3xl py-5 sm:text-4xl lg:text-5xl  leading-tight text-gray-400">
             Our Clients Are Our Superheroes. We Prioritize Delivering Excellent
             Products, Thorough Training, And Optimal Execution
           </h1>
-          {/* White fill layer */}
+
           <h1
             className="absolute top-0 left-0 text-3xl py-5 sm:text-4xl lg:text-5xl  leading-tight text-white overflow-hidden whitespace-nowrap"
             style={{
@@ -66,7 +62,6 @@ export default function TestimonialSection() {
           </h1>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
@@ -74,12 +69,12 @@ export default function TestimonialSection() {
               className={`relative rounded-xl overflow-hidden transition-shadow duration-300
                 ${index % 2 === 0 ? "lg:-mt-6" : "lg:mt-6"}`}
             >
-              {/* Image with Play Icon */}
-              <div className="relative w-[85%] mx-auto aspect-[4/5]">
+              <div className="relative w-full aspect-[4/5]">
                 <Image
                   src={testimonial.image}
                   alt={`${testimonial.name} testimonial`}
                   fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover shadow-xl rounded-xl"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -87,7 +82,6 @@ export default function TestimonialSection() {
                 </div>
               </div>
 
-              {/* Text */}
               <div className="p-4 text-center">
                 <p className="text-lg font-semibold">{testimonial.name}</p>
                 <p className="text-sm text-gray-400">{testimonial.title}</p>
