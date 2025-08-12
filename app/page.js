@@ -28,8 +28,8 @@ export default function Home() {
         <AwardsSection />
         <Statsanddetails />
         <Readytoinnovate />
-        <NavigateSection />
         <ImageScroller />
+        <NavigateSection />
         <ROISection />
         <OurTechnologyExpert />
         <FAQ />

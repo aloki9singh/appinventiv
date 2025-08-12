@@ -65,7 +65,6 @@ export const Offices = () => {
               key={i}
               className="space-y-4 transition-colors duration-300 hover:text-white group"
             >
-              {/* Image with border bottom */}
               <div className="pb-3 transition-colors duration-300 group-hover:border-white">
                 <img
                   src={`/images/Offices/${office.img}`}
@@ -74,12 +73,10 @@ export const Offices = () => {
                 />
               </div>
 
-              {/* Name */}
               <h3 className="text-lg font-semibold transition-colors duration-300 text-slate-400 group-hover:text-white">
                 {office.name}
               </h3>
 
-              {/* Address */}
               <p className="text-[16px] transition-colors duration-300 text-slate-400 group-hover:text-white">
                 {office.address}
               </p>
@@ -90,15 +87,6 @@ export const Offices = () => {
     </section>
   );
 };
-
-
-
-
-
-
-
-
-
 
 // "use client"
 // import React from "react";
@@ -113,7 +101,7 @@ export const Offices = () => {
 //           <Image
 //             src="/images/Offices/WhiteAppInventiv.svg"
 //             alt="Company Logo"
-//             height={56} 
+//             height={56}
 //             width={100}
 //             className="h-10 sm:h-12 lg:h-14"
 //           />

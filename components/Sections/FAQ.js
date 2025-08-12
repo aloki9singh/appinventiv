@@ -11,7 +11,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen px-4 py-10 bg-white md:px-10">
+    <div className="min-h-screen px-4 py-10 bg-white md:px-10" >
       <h1 className="p-10 mb-10 text-xl font-normal text-center text-black lg:text-5xl ">
         Frequently Asked Questions
       </h1>
