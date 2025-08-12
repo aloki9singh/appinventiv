@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const footerData = {
   about: ["Our company", "Core Team", "Career", "CSR", "How We Work"],
@@ -45,83 +46,106 @@ const footerData = {
   resources: ["Blog", "Press Release", "Guides", "Ebooks"],
 };
 
+const sections = [
+  { key: "about", title: "About" },
+  { key: "services", title: "Services" },
+  { key: "technologies", title: "Technologies" },
+  { key: "industries", title: "Industries" },
+  { key: "portfolio", title: "Portfolio" },
+  { key: "resources", title: "Resources" },
+];
+
 export default function Footer() {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (key) => {
+    setOpenSection(openSection === key ? null : key);
+  };
+
   return (
     <footer className="text-white bg-zinc-900">
       <div className="px-6 py-16 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-zinc-900">
-          {/* About */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">About</h3>
-            <ul className="space-y-2 ">
-              {footerData.about.map((item, idx) => (
-                <li key={idx} className="flex items-center">
-                  {item === "Career" ? (
-                    <>
+        {/* Desktop grid (hidden on small screens) */}
+        <div className="hidden grid-cols-6 gap-8 lg:grid">
+          {sections.map(({ key, title }) => (
+            <div key={key}>
+              <h3 className="mb-4 text-2xl font-bold">{title}</h3>
+              <ul className="space-y-2">
+                {footerData[key].map((item, idx) => (
+                  <li
+                    key={idx}
+                    className={
+                      key === "about" && item === "Career"
+                        ? "flex items-center"
+                        : ""
+                    }
+                  >
+                    {key === "about" && item === "Career" ? (
+                      <>
+                        <span>{item}</span>
+                        <span className="ml-2 text-xs bg-orange-500 rounded px-2 py-0.5 font-semibold">
+                          CLICK HERE
+                        </span>
+                      </>
+                    ) : (
                       <span>{item}</span>
-                      <span className="ml-2 text-xs bg-orange-500 rounded px-2 py-0.5 font-semibold">
-                        CLICK HERE
-                      </span>
-                    </>
-                  ) : (
-                    <span>{item}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">Services</h3>
-            <ul className="space-y-2">
-              {footerData.services.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Technologies */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">Technologies</h3>
-            <ul className="space-y-2">
-              {footerData.technologies.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">Industries</h3>
-            <ul className="space-y-2">
-              {footerData.industries.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Portfolio */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">Portfolio</h3>
-            <ul className="space-y-2">
-              {footerData.portfolio.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="mb-4 text-lg font-bold">Resources</h3>
-            <ul className="space-y-2">
-              {footerData.resources.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
+        {/* Accordion for mobile/tablet (shown on smaller screens) */}
+        <div className="lg:hidden">
+          {sections.map(({ key, title }) => (
+            <div key={key} className="border-b border-gray-700">
+              <button
+                onClick={() => toggleSection(key)}
+                className="flex items-center justify-between w-full py-4 text-lg font-bold text-left"
+                aria-expanded={openSection === key}
+              >
+                {title}
+                <span
+                  className={`transform transition-transform duration-300 ${
+                    openSection === key ? "rotate-45" : "rotate-0"
+                  }`}
+                >
+                  +
+                </span>
+              </button>
+
+              {openSection === key && (
+                <ul className="pb-4 space-y-2">
+                  {footerData[key].map((item, idx) => (
+                    <li
+                      key={idx}
+                      className={
+                        key === "about" && item === "Career"
+                          ? "flex items-center"
+                          : ""
+                      }
+                    >
+                      {key === "about" && item === "Career" ? (
+                        <>
+                          <span>{item}</span>
+                          <span className="ml-2 text-xs bg-orange-500 rounded px-2 py-0.5 font-semibold">
+                            CLICK HERE
+                          </span>
+                        </>
+                      ) : (
+                        <span>{item}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom footer section */}
         <div className="flex flex-col items-center pt-8 mt-16 text-sm text-gray-400 border-t border-gray-700 md:flex-row md:justify-between">
           <div className="flex items-center mb-4 space-x-4 md:mb-0">
             <img

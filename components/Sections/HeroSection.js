@@ -1,6 +1,6 @@
-
 "use client";
 import Image from "next/image";
+import { FaChevronRight } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -20,13 +20,17 @@ export default function HeroSection() {
           Engineering Global Digital Disruption with AI-Native Solutions
         </h1>
         <p className="max-w-2xl mt-6 text-base text-gray-200 sm:text-lg lg:text-xl">
-          We are a Deloitte Technology Fast 50 company and a Clutch Global Award 2025 winner
-          for unmatched customer excellence. Our mission is to leverage AI-driven automation and
-          strategic innovation to craft digital solutions that not only meet but anticipate your
-          business needs, ensuring sustainable market leadership.
+          We are a Deloitte Technology Fast 50 company and a Clutch Global Award
+          2025 winner for unmatched customer excellence. Our mission is to
+          leverage AI-driven automation and strategic innovation to craft
+          digital solutions that not only meet but anticipate your business
+          needs, ensuring sustainable market leadership.
         </p>
-        <button className="px-6 py-3 mt-8 font-medium text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-          Consult Our Experts <span> {"  >"}</span>
+        <button className="flex items-center px-6 py-3 mt-8 font-medium text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
+          Consult Our Experts
+          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+            <FaChevronRight />
+          </span>
         </button>
       </div>
     </section>

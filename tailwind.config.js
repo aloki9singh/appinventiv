@@ -12,8 +12,8 @@ module.exports = {
       },
 
       colors: {
-        "app-blue": "#0D47A1", // Appinventiv blue
-        "app-gray": "#F5F5F5", // Light gray background
+        "app-blue": "#0D47A1",
+        "app-gray": "#F5F5F5",
       },
       keyframes: {
         marquee: {
@@ -33,12 +33,17 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(-4px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         marquee: "marquee 15s linear infinite",
         gradientMove: "gradientMove 6s ease infinite",
         shine: "shine 5s linear infinite",
         "fade-in": "fadeIn 0.3s ease-out",
+        "scroll-horizontal": "scroll-left 20s linear infinite",
       },
       backgroundSize: {
         "200%": "200% 200%",

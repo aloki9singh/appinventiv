@@ -3,23 +3,26 @@ import React from "react";
 export const Offices = () => {
   return (
     <section className="py-16 text-center bg-gradient-to-b from-black to-slate-900">
-      <div className="px-[130px] mx-auto">
-        <div className="p-10 lg:flex lg:justify-between">
-          <h1 className="mb-4 text-4xl font-bold">
-            <img
-              src="/images/Offices/WhiteAppInventiv.svg"
-              alt="USA Skyline"
-              className="mx-auto "
-            />
-          </h1>
-          <p className="flex p-2 mb-8 text-blue-200 bg-slate-800">
+      <div className="lg:px-[130px] px-[20px] mx-auto">
+        <div className="flex flex-col items-center gap-4 p-6 sm:flex-row sm:justify-center sm:items-center lg:flex-row lg:justify-between lg:items-center">
+          {/* Logo */}
+          <img
+            src="/images/Offices/WhiteAppInventiv.svg"
+            alt="Company Logo"
+            className="h-10 sm:h-12 lg:h-14"
+          />
+
+          {/* Clutch badge */}
+          <div className="flex items-center px-3 py-2 text-blue-200 rounded-md bg-slate-800">
             <img
               src="/images/Offices/clutch.svg"
-              alt="USA Skyline"
-              className="mx-auto w-[25px] "
+              alt="Clutch Logo"
+              className="w-5 h-5"
             />
-          <span className="pl-2 text-xs text-white lg:text-lg">  Most trusted Mobile App Consulting Company on Clutch</span>
-          </p>
+            <span className="pl-2 text-xs text-white sm:text-sm lg:text-base">
+              Most trusted Mobile App Consulting Company on Clutch
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-6">
@@ -67,7 +70,7 @@ export const Offices = () => {
                 <img
                   src={`/images/Offices/${office.img}`}
                   alt={`${office.name} Skyline`}
-                  className=" pb-5 mx-auto transition-all duration-300 border-b-2 filter brightness-75 group-hover:brightness-0 group-hover:invert border-slate-600 w-[400px] h-[150px]"
+                  className=" pb-5 mx-auto transition-all duration-300 border-b-2 filter brightness-75 group-hover:brightness-0 group-hover:invert border-slate-600 lg:w-[400px] lg:h-[150px]"
                 />
               </div>
 

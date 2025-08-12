@@ -3,7 +3,7 @@ export default function OurTechnologyExpert() {
     <div className="flex flex-col items-start justify-between min-h-screen px-8 py-16 text-white md:flex-row md:items-center md:px-32 lg:px-40 bg-[linear-gradient(to_bottom_right,_#6D28D9,_#334155,_#000000,_#075985,_#0C4A6E)] lg:space-x-5">
       {/* Left Section */}
       <div className="space-y-6 md:w-3/5">
-        <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+        <h1 className="text-2xl font-semibold leading-tight lg:text-4xl md:text-5xl">
           Our Technology <br /> Experts Are Change <br /> Catalysts
         </h1>
         <p className="text-base">

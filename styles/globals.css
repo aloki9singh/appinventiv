@@ -30,3 +30,13 @@ body {
 .animate-move-right {
   animation: move-right 2s linear infinite;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.group:hover .animate-scroll-horizontal {
+  animation-play-state: paused;
+}

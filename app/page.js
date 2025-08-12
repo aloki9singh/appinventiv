@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
       </header>
 
-      <main className="pt-[123px] px-0 bg-black lg:px-18">
+      <main className="pt-[115px] px-0 bg-black lg:px-18">
         <HeroSection />
         <AwardsSection />
         <Statsanddetails />

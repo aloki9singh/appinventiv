@@ -11,11 +11,11 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen px-4 py-10 bg-white md:px-20">
-      <h1 className="mb-10 text-3xl font-bold text-center text-purple-700">
+    <div className="min-h-screen px-4 py-10 bg-white md:px-10">
+      <h1 className="p-10 mb-10 text-xl font-normal text-center text-black lg:text-5xl ">
         Frequently Asked Questions
       </h1>
-      <div className="grid max-w-6xl gap-6 mx-auto md:grid-cols-2">
+      <div className="grid gap-6 mx-auto max-w-7xl md:grid-cols-2">
         {faqData.map((item, index) => (
           <FAQItem
             key={index}
