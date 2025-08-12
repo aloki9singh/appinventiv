@@ -1,4 +1,5 @@
 import NavigateCard from "../common/NavigateCard";
+import GradientButton from "../common/GradientButton";
 
 export default function NavigateSection() {
   const cards = [
@@ -53,7 +54,27 @@ export default function NavigateSection() {
   ];
 
   return (
-    <section className="px-4 py-12 bg-transparent sm:px-6 lg:px-12">
+    <section className="px-4 py-12 bg-transparent sm:px-6 lg:px-12 space-y-12">
+      <div
+        className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
+        style={{ maxWidth: "76rem", margin: "0 auto" }}
+      >
+        <div>
+          <span className="hidden lg:block text-white text-5xl leading-tight">
+            Navigate the Digital Frontier with <br />
+            <span>Our Engineering Excellence</span>
+          </span>
+
+          <span className="block lg:hidden text-white text-2xl">
+            Navigate the Digital Frontier with Our Engineering Excellence
+          </span>
+        </div>
+
+        <div className="hidden lg:block">
+          <GradientButton label="Our Services" />
+        </div>
+      </div>
+
       <div
         className="grid gap-6 mx-auto sm:grid-cols-1 lg:grid-cols-4"
         style={{ maxWidth: "76rem" }}

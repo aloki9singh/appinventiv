@@ -1,11 +1,15 @@
-import { ArrowRight } from "lucide-react";
+import { FaChevronRight } from "react-icons/fa";
 
-const GradientButton = ({ label = "Our Services" }) => {
+
+const GradientButton = ({ label}) => {
   return (
-    <div className="flex justify-end w-full" style={{ maxWidth: "76rem", margin: "0 auto" }}>
-      <button className="flex items-center gap-2 border border-white text-white rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 hover:bg-white hover:text-black group">
+    <div
+      className="flex justify-end w-full "
+      style={{ maxWidth: "76rem", margin: "0 auto" }}
+    >
+      <button className="flex items-center gap-2 px-6 py-4 text-sm font-medium text-white transition-all duration-300 border hover:border-none border-white rounded-lg hover:bg-blue-600  group">
         {label}
-        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+        <FaChevronRight className="w-4 h-4 group-hover:animate-moveRight" />
       </button>
     </div>
   );

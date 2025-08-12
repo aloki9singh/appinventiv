@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -26,10 +27,10 @@ export default function HeroSection() {
           digital solutions that not only meet but anticipate your business
           needs, ensuring sustainable market leadership.
         </p>
-        <button className="flex items-center px-6 py-3 mt-8 font-medium text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
+        <button className="flex items-center px-6 py-3 mt-8 font-medium  hover:bg-blue-600 shadow-lg  text-white transition-all duration-300 border hover:border-none border-white rounded-lg  group">
           Consult Our Experts
-          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-            <FaChevronRight />
+          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1 ">
+            <FaChevronRight className="w-4 h-4 group-hover:animate-moveRight" />
           </span>
         </button>
       </div>
