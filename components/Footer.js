@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const footerData = {
@@ -148,10 +149,12 @@ export default function Footer() {
         {/* Bottom footer section */}
         <div className="flex flex-col items-center pt-8 mt-16 text-sm text-gray-400 border-t border-gray-700 md:flex-row md:justify-between">
           <div className="flex items-center mb-4 space-x-4 md:mb-0">
-            <img
+            <Image
               src="/images/Footer/DMCA.png"
               alt="DMCA Protected"
-              className="w-auto h-10"
+              width={20} 
+              height={40} 
+              style={{ width: "auto", height: "40px" }}
             />
             <p>
               Full stack mobile (iOS, Android) and web app design and

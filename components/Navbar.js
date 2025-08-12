@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ButtonWithIcon from "./common/ButtonWithIcon";
 import RingingCallIcon from "./Callicon/Callicon";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,10 +17,12 @@ export default function Navbar() {
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
+          <Image
             src="/images/appinventivlogo.svg"
+            alt="App inventiv Logo"
+            height={50} 
+            width={170} 
             className="h-8"
-            alt="Flowbite Logo"
           />
         </Link>
 
