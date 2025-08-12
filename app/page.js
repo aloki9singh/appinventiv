@@ -17,6 +17,8 @@ import CaseStudy from "../components/Sections/CaseStudy";
 import CaseStudy2 from "../components/Sections/CaseStudy2";
 import TestimonialSection from "../components/Sections/TestimonialSection";
 import FeatureSection from "../components/Sections/FeatureSection";
+import { AirplayIcon } from "lucide-react";
+import AITalkSection from "../components/Sections/Aitalksection";
 
 export default function Home() {
   return (
@@ -35,10 +37,11 @@ export default function Home() {
         <CaseStudy />
         {/* <CaseStudy2 /> */}
         <TestimonialSection />
-        <FeatureSection />
-
-        {/* <ImageScroller /> */}
         <NavigateSection />
+        <FeatureSection />
+        <AITalkSection />
+        {/* <ImageScroller /> */}
+
         <ROISection />
         <OurTechnologyExpert />
         <FAQ />
