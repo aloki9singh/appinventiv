@@ -32,7 +32,7 @@ export default function AITalkSection() {
           <Image
             width={350}
             height={350}
-            src="/images/talkai/ai.svg" // <-- Replace this with your actual image name/path
+            src="/images/talkai/ai.svg" 
             alt="AI Chip Illustration"
             className="max-w-full h-auto"
           />
