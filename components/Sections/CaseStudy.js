@@ -7,7 +7,6 @@ const CaseStudy = () => {
   return (
     <section className="bg-black text-white py-16 px-4 md:px-20">
       <div className="max-w-[76rem] mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Left: Text Content */}
         <div className="flex-1">
           <p className="text-blue-500 text-sm uppercase mb-2">Case Study</p>
           <h2 className="text-3xl font-bold mb-4">Adidas</h2>
@@ -15,7 +14,6 @@ const CaseStudy = () => {
             Crafting innovation for the consumer markets with Adidas
           </p>
 
-          {/* Stats */}
           <div className="flex space-x-8 mb-6">
             <div>
               <p className="text-2xl font-bold">5M+</p>
@@ -27,7 +25,6 @@ const CaseStudy = () => {
             </div>
           </div>
 
-        
           <button className="flex items-center gap-x-2 border border-white text-white px-6 py-2 rounded hover:bg-white hover:text-black transition group">
             View case study
             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -36,7 +33,6 @@ const CaseStudy = () => {
           </button>
         </div>
 
-        {/* Right: Image */}
         <div className="flex-1 w-full max-w-xl rounded overflow-hidden">
           <div className="relative w-full h-80 rounded-lg overflow-hidden">
             <Image
