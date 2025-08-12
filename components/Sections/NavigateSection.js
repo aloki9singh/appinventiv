@@ -54,7 +54,10 @@ export default function NavigateSection() {
 
   return (
     <section className="px-4 py-12 bg-transparent sm:px-6 lg:px-12">
-      <div className="grid gap-6 mx-auto max-w-7xl sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        className="grid gap-6 mx-auto sm:grid-cols-1 lg:grid-cols-4"
+        style={{ maxWidth: "76rem" }}
+      >
         {cards.map((card, id) => (
           <NavigateCard key={id} {...card} />
         ))}
