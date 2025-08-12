@@ -9,6 +9,8 @@ import AwardsSection from "../components/Sections/AwardsSection";
 import { Readytoinnovate } from "../components/Sections/Readytoinnovate";
 import ROISection from "../components/Sections/ROIintelligence";
 import { Offices } from "../components/Sections/Offices";
+import OurTechnologyExpert from "../components/Sections/OurTechnologyExperts";
+import FAQ from "../components/Sections/FAQ";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
 
         <ImageScroller />
         <ROISection />
+        <OurTechnologyExpert/>
+        <FAQ/>
         <Offices />
       </main>
 

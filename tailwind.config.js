@@ -29,11 +29,16 @@ module.exports = {
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
+        fadeIn: {
+          "0%": { opacity: 0, transform: "translateY(-4px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
       animation: {
         marquee: "marquee 15s linear infinite",
         gradientMove: "gradientMove 6s ease infinite",
         shine: "shine 5s linear infinite",
+        "fade-in": "fadeIn 0.3s ease-out",
       },
       backgroundSize: {
         "200%": "200% 200%",
@@ -42,4 +47,3 @@ module.exports = {
   },
   plugins: [],
 };
-
