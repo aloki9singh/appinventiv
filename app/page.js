@@ -14,19 +14,19 @@ import FAQ from "../components/Sections/FAQ";
 
 import NavigateSection from "../components/Sections/NavigateSection";
 import CaseStudy from "../components/Sections/CaseStudy";
-import CaseStudy2 from "../components/Sections/CaseStudy2";
+// import CaseStudy2 from "../components/Sections/CaseStudy2";
 import TestimonialSection from "../components/Sections/TestimonialSection";
 import FeatureSection from "../components/Sections/FeatureSection";
-import { AirplayIcon } from "lucide-react";
+
 import AITalkSection from "../components/Sections/Aitalksection";
 import Partnerships from "../components/Sections/Partnerships";
 import AwardsCarousel from "../components/Sections/AwardCarousel";
 import TestimonialCarousel from "../components/Sections/TestimonialCrousel";
 import { UnifiedVision } from "../components/Sections/UnifiedVision";
-import PartnershipsSection from "../components/Sections/Partnershipsection";
 import IndustryCards from "../components/Sections/Industrycards";
 import TechCapabilities from "../components/Sections/TechCapabilities";
 import Solving from "../components/Sections/Solving";
+import PartnershipsSection from "../components/Sections/PartnershipsSection";
 
 export default function Home() {
   return (
