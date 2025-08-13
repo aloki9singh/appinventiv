@@ -122,7 +122,7 @@ export default function AwardsCarousel() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h2 className="lg:text-[2.7rem] text-2xl md:text-4xl  leading-tight  lg:leading-relaxed text-white max-w-[85%] mb-7">
+        <h2 className="lg:text-[2.7rem] text-2xl md:text-4xl  leading-normal  lg:leading-relaxed text-white max-w-[85%] mb-7">
           Our Growth Journey As A Mobile App Development Company Has Bagged A
           Few Reputed Accolades As Well
         </h2>
@@ -147,12 +147,12 @@ export default function AwardsCarousel() {
 
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto space-x-6 px-2 no-scrollbar"
+        className="flex overflow-x-auto gap-6 px-2 no-scrollbar"
       >
         {awards.map((award, index) => (
           <div
             key={index}
-            className="min-w-[250px] bg-[#1e1e1e] text-white p-6 rounded-xl flex-shrink-0 text-center"
+            className="w-[calc(100%/1.2)] sm:w-[calc(100%/1.5)] md:w-[calc(100%/2.5)] lg:w-[calc(100%/4.2)] bg-[#1e1e1e] text-white p-6 rounded-xl flex-shrink-0 text-center space-y-2"
           >
             <div className="w-20 h-20 mx-auto mb-4 relative">
               <Image
@@ -163,7 +163,7 @@ export default function AwardsCarousel() {
               />
             </div>
             <div className="text-lg font-semibold">{award.title}</div>
-            <div className="text-sm text-gray-400">{award.year}</div>
+            <div className="text-sm">{award.year}</div>
             <div className="mt-2 text-sm">{award.description}</div>
           </div>
         ))}
