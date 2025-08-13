@@ -7,6 +7,7 @@ import {
   FaMobileAlt,
   FaDatabase,
   FaCloud,
+  FaArrowRight,
 } from "react-icons/fa";
 import { SiGoogleanalytics } from "react-icons/si";
 
@@ -65,8 +66,8 @@ const techData = {
       "Azure Data Lake",
       "Azure SQL Database",
       "Azure Synapse Analytics",
-      "Google Cloud Datastore",
-      "Google Cloud SQL",
+      // "Google Cloud Datastore",
+      // "Google Cloud SQL",
     ],
   },
   "Cloud DB, Warehouses And Storage": {
@@ -79,38 +80,16 @@ const techData = {
       "Databricks",
     ],
   },
-  DevOps: {
-    Tools: [
-      "Apache Mesos",
-      "Docker",
-      "Kubernetes",
-      "Openshift",
-      "Terraform",
-      "Packer",
-      "Ansible",
-      "Chef",
-      "Saltstack",
-      "Puppet",
-      "AWS Developer Tools",
-      "Azure DevOps",
-    ],
-  },
-  "Architecture Designs And Patterns": {
-    Types: [
-      "Traditional 3-Layer Architecture",
-      "Cloud-Native Architecture",
-      "Microservices-Based Architecture",
-      "Service-Oriented Architecture (SOA)",
-      "Reactive Architecture",
-      "Computer Vision",
-      "Various approaches to enterprise Application Integration",
-      "PWA",
-    ],
-  },
 };
 
 export default function TechCapabilities() {
   const [activeTab, setActiveTab] = useState("Artificial Intelligence");
+  const [openAccordion, setOpenAccordion] = useState(null); // for mobile
+
+  const toggleAccordion = (label) => {
+    setOpenAccordion((prev) => (prev === label ? null : label));
+    setActiveTab(label);
+  };
 
   return (
     <section className="bg-black text-white px-4 py-16 md:px-12">
@@ -120,32 +99,61 @@ export default function TechCapabilities() {
           Clients
         </h2>
 
-        <div className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-lg">
-          {/* Left Tabs */}
-          <div className="bg-blue-600 w-full md:w-1/2 p-6 space-y-2 overflow-y-auto max-h-[500px]">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row">
+     
+          <div className="bg-blue-600 w-full md:w-1/2 p-6 space-y-2 overflow-y-auto max-h-max">
             {categories.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(item.label)}
-                className={`w-full flex items-center justify-between gap-4 text-left px-4 py-3 rounded-lg transition-all ${
-                  activeTab === item.label
-                    ? "bg-blue-500 text-white font-semibold"
-                    : "text-white hover:bg-blue-500"
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-lg">{item.icon}</span>
-                  <span className="text-sm sm:text-base">{item.label}</span>
+              <div key={index}>
+                <button
+                  onClick={() => toggleAccordion(item.label)}
+                  className={`w-full flex items-center justify-between gap-4 text-left px-4 py-3 rounded-lg transition-all ${
+                    openAccordion === item.label
+                      ? "bg-blue-500 text-white font-semibold"
+                      : "text-white hover:bg-blue-500"
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-sm sm:text-base">{item.label}</span>
+                  </div>
+                  <span className="text-xl">
+                    {openAccordion === item.label ? <FaArrowRight/> : ""  }
+                  </span>
+                </button>
+
+                {/* Mobile */}
+                <div
+                  className={`block md:hidden transition-all duration-300 ease-in-out ${
+                    openAccordion === item.label ? "max-h-screen mt-3" : "max-h-0 overflow-hidden"
+                  }`}
+                >
+                
+                  {Object.entries(techData[item.label] || {}).map(
+                    ([section, items], idx) => (
+                      <div key={idx} className="mb-6 px-2">
+                        <h4 className="font-semibold text-lg mb-3 text-white">
+                          {section}
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
+                          {items.map((tech, i) => (
+                            <div
+                              key={i}
+                              className="bg-gray-100 hover:bg-gray-200 transition rounded-lg py-2 px-3 text-sm font-medium text-black"
+                            >
+                              {tech}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  )}
                 </div>
-                {activeTab === item.label && (
-                  <span className="text-xl">&#8594;</span>
-                )}
-              </button>
+              </div>
             ))}
           </div>
 
-          {/* Right Content */}
-          <div className="w-full md:w-1/2 p-8 bg-white text-black">
+          {/* Desktop */}
+          <div className="hidden md:block w-full md:w-1/2 p-8 bg-white text-black">
             {Object.entries(techData[activeTab] || {}).map(
               ([section, items], idx) => (
                 <div key={idx} className="mb-6">
