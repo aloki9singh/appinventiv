@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+import { useState, useRef, useEffect } from "react";
 
 const caseStudies = [
   {
@@ -51,28 +50,54 @@ const caseStudies = [
 
 export default function CaseStudy() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const sectionRef = useRef(null);
+  const lastScrollY = useRef(0);
+  const isCooldown = useRef(false);
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () =>
-      setActiveIndex((prev) => (prev + 1) % caseStudies.length),
-    onSwipedRight: () =>
-      setActiveIndex(
-        (prev) => (prev - 1 + caseStudies.length) % caseStudies.length
-      ),
-    preventScrollOnSwipe: true,
-    trackMouse: true,
-  });
+  const handleScroll = () => {
+    if (!sectionRef.current || isCooldown.current) return;
+
+    const section = sectionRef.current.getBoundingClientRect();
+    const scrollTop = window.scrollY;
+
+    if (section.top < window.innerHeight && section.bottom > 0) {
+      const direction = scrollTop > lastScrollY.current ? "down" : "up";
+      lastScrollY.current = scrollTop;
+
+      if (direction === "down") {
+        setActiveIndex((prev) => (prev + 1) % caseStudies.length);
+      } else {
+        setActiveIndex(
+          (prev) => (prev - 1 + caseStudies.length) % caseStudies.length
+        );
+      }
+
+      isCooldown.current = true;
+      setTimeout(() => {
+        isCooldown.current = false;
+      }, 1000); // 1 second cooldown for smooth feel
+    }
+  };
+
+  useEffect(() => {
+    const onScroll = () => {
+      window.requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const current = caseStudies[activeIndex];
   const next = caseStudies[(activeIndex + 1) % caseStudies.length];
 
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-20">
-      <div
-        className="max-w-[76rem] mx-auto flex flex-col md:flex-row items-center gap-10"
-        {...handlers}
-      >
-     
+    <section
+      ref={sectionRef}
+      className="bg-black text-white py-16 px-4 md:px-20"
+    >
+      <div className="max-w-[76rem] mx-auto flex flex-col md:flex-row items-center gap-10">
+        {/* Left Content */}
         <div className="flex-1">
           <AnimatePresence mode="wait">
             <motion.div
@@ -80,7 +105,7 @@ export default function CaseStudy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }} // smoother transition
             >
               <p className="text-blue-500 text-sm uppercase mb-2">
                 {current.subtitle}
@@ -109,9 +134,8 @@ export default function CaseStudy() {
           </AnimatePresence>
         </div>
 
-       
+        {/* Right Image */}
         <div className="flex-1 w-full max-w-xl relative h-80 rounded-lg overflow-hidden">
-        
           <Image
             src={next.image}
             alt={next.title}
@@ -119,14 +143,13 @@ export default function CaseStudy() {
             className="object-cover rounded-lg"
           />
 
-          {/* Foreground (Current image) with mask reveal */}
           <AnimatePresence mode="wait">
             <motion.div
               key={current.image}
               initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
               animate={{ clipPath: "inset(0% 0% 100% 0%)" }}
               exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }} // smoother reveal
               className="absolute inset-0"
             >
               <Image

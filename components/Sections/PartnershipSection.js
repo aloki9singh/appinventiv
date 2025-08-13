@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function PartnershipsSection() {
   return (
     <section className=" bg-black text-white px-4 py-16 md:px-12 w-full ">
-      <div className= "max-w-[70rem] w-full mx-auto ">
+      <div className= "max-w-[76rem] w-full mx-auto ">
       {/* <div className="max-w-screen-xl mx-auto"> */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-12">
           Strategic Partnerships to <br /> Unlock Greater Business Value
