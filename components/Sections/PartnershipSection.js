@@ -4,7 +4,8 @@ import Image from "next/image";
 export default function PartnershipsSection() {
   return (
     <section className="bg-black text-white px-4 py-16 md:px-12">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto ">
+      {/* <div className="max-w-screen-xl mx-auto"> */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-12">
           Strategic Partnerships to <br /> Unlock Greater Business Value
         </h2>
@@ -43,7 +44,7 @@ export default function PartnershipsSection() {
                 height={60}
                 className="mb-4"
               />
-              <p className="text-base text-gray-300">{name}</p>
+              <p className="text-lg text-gray-300">{name}</p>
             </div>
           ))}
         </div>

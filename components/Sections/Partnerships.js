@@ -23,7 +23,7 @@ export default function Partnerships() {
   return (
     <section className="bg-black text-white py-16">
       <div className="mx-auto max-w-[78rem] px-4 space-y-10">
-        <h2 className="text-4xl font-semibold leading-relaxed mb-14">
+        <h2 className="lg:text-4xl text-2xl font-semibold leading-relaxed mb-14">
           Our Partnerships Have Transformed How <br />
           You Experience These Global Leaders
         </h2>

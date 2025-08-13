@@ -5,7 +5,7 @@ export const UnifiedVision = () => {
   return (
     <div
       className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 py-10 px-5"
-      style={{ maxWidth: "76rem", margin: "0 auto" }}
+      style={{ maxWidth: "79rem", margin: "0 auto" }}
     >
       <div>
         <span className="hidden lg:block text-white text-5xl leading-tight">
