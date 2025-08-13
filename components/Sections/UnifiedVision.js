@@ -4,7 +4,7 @@ import GradientButton from "../common/GradientButton";
 export const UnifiedVision = () => {
   return (
     <div
-      className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 py-10"
+      className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 py-10 px-5"
       style={{ maxWidth: "76rem", margin: "0 auto" }}
     >
       <div>
@@ -18,7 +18,7 @@ export const UnifiedVision = () => {
         </span>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="">
         <GradientButton label="Explore More in Industries" />
       </div>
     </div>

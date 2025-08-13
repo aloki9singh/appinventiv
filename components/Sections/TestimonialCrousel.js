@@ -121,13 +121,13 @@ export default function TestimonialSection() {
               : "animate-slide-in-left"
           }`}
         >
-          <div className="bg-[#111] border border-[#1e1e1e] p-8 sm:p-12 rounded-xl shadow-xl">
+          <div className=" border border-gray-600 p-8 sm:p-12 rounded-xl shadow-xl">
             <p className="text-sm sm:text-lg mb-6 leading-relaxed">
               {testimonials[currentIndex].quote}
             </p>
 
             <div className="flex items-center justify-between border-t border-t-slate-700 pt-5">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 space-x-3">
                 <div className="w-20 h-20 rounded-lg overflow-hidden">
                   <Image
                     src={testimonials[currentIndex].avatar}
@@ -137,7 +137,7 @@ export default function TestimonialSection() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div>
+                <div >
                   <p className="font-semibold text-base">
                     {testimonials[currentIndex].author}
                   </p>
