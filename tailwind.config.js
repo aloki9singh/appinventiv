@@ -41,6 +41,14 @@ module.exports = {
           "0%, 100%": { transform: "translateX(0)" },
           "50%": { transform: "translateX(4px)" },
         },
+        "slide-in-right": {
+          "0%": { opacity: 0, transform: "translateX(4rem)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+        "slide-in-left": {
+          "0%": { opacity: 0, transform: "translateX(-4rem)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
       },
       animation: {
         marquee: "marquee 15s linear infinite",
@@ -49,6 +57,8 @@ module.exports = {
         "fade-in": "fadeIn 0.3s ease-out",
         "scroll-horizontal": "scroll-left 20s linear infinite",
         moveRight: "moveRight 0.5s ease-in-out infinite",
+        "slide-in-right": "slide-in-right 0.4s ease-out forwards",
+        "slide-in-left": "slide-in-left 0.4s ease-out forwards",
       },
       backgroundSize: {
         "200%": "200% 200%",

@@ -19,11 +19,18 @@ import TestimonialSection from "../components/Sections/TestimonialSection";
 import FeatureSection from "../components/Sections/FeatureSection";
 import { AirplayIcon } from "lucide-react";
 import AITalkSection from "../components/Sections/Aitalksection";
+import Partnerships from "../components/Sections/Partnerships";
+import AwardsCarousel from "../components/Sections/AwardCarousel";
+import TestimonialCarousel from "../components/Sections/TestimonialCrousel";
+import { UnifiedVision } from "../components/Sections/UnifiedVision";
+import PartnershipsSection from "../components/Sections/Partnershipsection";
+import IndustryCards from "../components/Sections/Industrycards";
+import TechCapabilities from "../components/Sections/TechCapabilities";
+import Solving from "../components/Sections/Solving";
 
 export default function Home() {
   return (
     <div className="min-h-screen text-purple-700 bg-app-gray">
-      {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50">
         <TopBar />
         <Navbar />
@@ -35,14 +42,22 @@ export default function Home() {
         <Statsanddetails />
         <Readytoinnovate />
         <CaseStudy />
-        {/* <CaseStudy2 /> */}
+        {/* <CaseStudy2/> */}
         <TestimonialSection />
         <NavigateSection />
+        <ROISection />
         <FeatureSection />
         <AITalkSection />
-        {/* <ImageScroller /> */}
 
-        <ROISection />
+        <Partnerships />
+        <AwardsCarousel />
+        <TestimonialCarousel />
+        <UnifiedVision />
+        <IndustryCards />
+        <TechCapabilities />
+
+        <PartnershipsSection />
+        <Solving />
         <OurTechnologyExpert />
         <FAQ />
         <Offices />
