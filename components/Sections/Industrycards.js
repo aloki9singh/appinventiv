@@ -59,7 +59,7 @@ export default function IndustryCards() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white px-4 py-16 md:px-12">
+    <section className="bg-black text-white px-4 py-16 md:px-12 max-w-[82rem] m-auto">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {industries.map((industry, index) => (
           <div

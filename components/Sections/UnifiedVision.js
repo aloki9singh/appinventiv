@@ -1,4 +1,5 @@
 import React from "react";
+import { FaChevronRight } from "react-icons/fa";
 import GradientButton from "../common/GradientButton";
 
 export const UnifiedVision = () => {
@@ -19,7 +20,15 @@ export const UnifiedVision = () => {
       </div>
 
       <div className="">
-        <GradientButton label="Explore More in Industries" />
+        <div
+          className="flex lg:justify-end  w-full "
+          style={{ maxWidth: "76rem", margin: "0 auto" }}
+        >
+          <button className="flex items-center gap-2 px-6 py-4 text-sm font-medium text-white transition-all duration-300 border hover:border-none border-white rounded-lg hover:bg-blue-600  group">
+            Explore More in Industries
+            <FaChevronRight className="w-4 h-4 group-hover:animate-moveRight" />
+          </button>
+        </div>
       </div>
     </div>
   );
